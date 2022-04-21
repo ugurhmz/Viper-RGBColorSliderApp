@@ -44,12 +44,12 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hnG-zM-8lP">
-                                <rect key="frame" x="42" y="660" width="330" height="52"/>
+                                <rect key="frame" x="20" y="660" width="374" height="53"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="52" id="K09-E5-3yA"/>
-                                    <constraint firstAttribute="width" constant="330" id="alo-wR-HqL"/>
+                                    <constraint firstAttribute="height" constant="53" id="K09-E5-3yA"/>
+                                    <constraint firstAttribute="width" constant="374" id="alo-wR-HqL"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="34"/>
+                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -72,7 +72,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-758" y="113"/>
+            <point key="canvasLocation" x="-759.4202898550725" y="112.5"/>
         </scene>
     </scenes>
     <resources>
