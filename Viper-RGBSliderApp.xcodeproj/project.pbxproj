@@ -11,6 +11,7 @@
 		6343322F2811AE57003E4450 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6343322E2811AE57003E4450 /* HomeInteractor.swift */; };
 		634332312811AE66003E4450 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634332302811AE66003E4450 /* HomePresenter.swift */; };
 		634332332811AFFC003E4450 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634332322811AFFC003E4450 /* HomeRouter.swift */; };
+		636B1E092812004C00EAFDCC /* AppColorDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636B1E082812004C00EAFDCC /* AppColorDao.swift */; };
 		6374C991281168DC00C2F938 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6374C990281168DC00C2F938 /* AppDelegate.swift */; };
 		6374C993281168DC00C2F938 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6374C992281168DC00C2F938 /* SceneDelegate.swift */; };
 		6374C995281168DC00C2F938 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6374C994281168DC00C2F938 /* HomeVC.swift */; };
@@ -25,6 +26,7 @@
 		6343322E2811AE57003E4450 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		634332302811AE66003E4450 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		634332322811AFFC003E4450 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		636B1E082812004C00EAFDCC /* AppColorDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColorDao.swift; sourceTree = "<group>"; };
 		6374C98D281168DC00C2F938 /* Viper-RGBSliderApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Viper-RGBSliderApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6374C990281168DC00C2F938 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6374C992281168DC00C2F938 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 			children = (
 				634332342811B015003E4450 /* Home */,
 				6374C9A4281177D500C2F938 /* Core */,
+				636B1E082812004C00EAFDCC /* AppColorDao.swift */,
 			);
 			path = "Viper-RGBSliderApp";
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				634332312811AE66003E4450 /* HomePresenter.swift in Sources */,
+				636B1E092812004C00EAFDCC /* AppColorDao.swift in Sources */,
 				6374C9A6281177F700C2F938 /* HomeContracts.swift in Sources */,
 				6374C995281168DC00C2F938 /* HomeVC.swift in Sources */,
 				6343322D2811AD3E003E4450 /* HomeBuilder.swift in Sources */,

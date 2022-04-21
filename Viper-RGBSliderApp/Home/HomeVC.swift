@@ -18,23 +18,10 @@ class HomeVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let rgb = loadCurrentColor()
-        print("kaydedilen \(rgb.0), \(rgb.1), \(rgb.2)")
-        sliderRed.value = Float(rgb.0)
-        sliderGreen.value = Float(rgb.1)
-        sliderBlue.value = Float(rgb.2)
-        
-        
-        rgbLabel.text = "RGB ( \(rgb.0), \(rgb.1), \(rgb.2) )"
-        
-        self.view.backgroundColor = UIColor(red: rgb.0/255,
-                                            green: rgb.1/255,
-                                            blue: rgb.2/255, alpha: 1)
+        loadCurrentColor()
       
     }
 
-    
     
     @IBAction func onRedChanged(_ sender: UISlider) {
         print(sender.value)
@@ -57,21 +44,18 @@ class HomeVC: UIViewController {
     
     // save color
     func saveCurrentColor(rgb: (CGFloat, CGFloat, CGFloat)) -> (Void) {
-        UserDefaults.standard.set(rgb.0, forKey: "Red")
-        UserDefaults.standard.set(rgb.1, forKey: "Green")
-        UserDefaults.standard.set(rgb.2, forKey: "Blue")
-        
-        print("\(rgb.0), \(rgb.1), \(rgb.2)")
+        presenter?.onValueChange(rgb: rgb)
     }
     
+    
+    
     // load current color
-    func loadCurrentColor() -> (CGFloat, CGFloat, CGFloat) {
+    func loadCurrentColor() -> () {
         
-        let red = CGFloat(UserDefaults.standard.float(forKey: "Red"))
-        let green = CGFloat(UserDefaults.standard.float(forKey: "Green"))
-        let blue = CGFloat(UserDefaults.standard.float(forKey: "Blue"))
+      // view presenter ile konuştuğu için, view'da yazılacak bir funca, presenterin delegate ile
+      // veri yolluyoruz
         
-        return (red, green, blue)
+        presenter?.onLoadCurrentColor()
     }
     
 }
@@ -80,8 +64,21 @@ class HomeVC: UIViewController {
 
 //MARK: - Contract
 extension HomeVC: HomeViewProtocol {
-  
-    
+    func loadCurrentColor(rgb: (CGFloat, CGFloat, CGFloat)) {
+        
+        
+      
+
+        sliderRed.value = Float(rgb.0)
+        sliderGreen.value = Float(rgb.1)
+        sliderBlue.value = Float(rgb.2)
+
+
+        rgbLabel.text = "RGB ( \(rgb.0), \(rgb.1), \(rgb.2) )"
+        self.view.backgroundColor = UIColor(red: rgb.0/255,
+                                            green: rgb.1/255,
+                                            blue: rgb.2/255, alpha: 1)
+    }
 }
 
 
@@ -101,8 +98,9 @@ extension HomeVC: HomeColorValueDelegateProtocol {
         rgbLabel.text = "RGB ( \(red), \(green), \(blue) )"
         
         self.view.backgroundColor = UIColor(red: red/255, green: green/255, blue: blue/255, alpha: 1)
+      
+        self.saveCurrentColor(rgb: (red, green, blue))
         
-        saveCurrentColor(rgb: (red, green, blue))
     }
     
 }
