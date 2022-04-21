@@ -9,6 +9,8 @@ import UIKit
 
 class HomeVC: UIViewController {
 
+    var presenter: HomePresenterProtocol?
+    
     @IBOutlet weak var sliderRed: UISlider!
     @IBOutlet weak var sliderGreen: UISlider!
     @IBOutlet weak var sliderBlue: UISlider!
@@ -73,6 +75,15 @@ class HomeVC: UIViewController {
     }
     
 }
+
+
+
+//MARK: - Contract
+extension HomeVC: HomeViewProtocol {
+  
+    
+}
+
 
 
 //MARK: -
